@@ -1,0 +1,44 @@
+#include <iostream>
+
+int main() {
+  
+  double weight;
+  int x;
+
+  std::cout << "Please enter your current earth weight: ";
+  std::cin >> weight;
+
+  std::cout << "\nI have information for the following planets:\n\n";
+  std::cout << "   1. Venus   2. Mars    3. Jupiter\n";
+  std::cout << "   4. Saturn  5. Uranus  6. Neptune\n\n";
+  
+  std::cout << "Which planet are you visiting? ";
+  std::cin >> x;
+  
+  switch (x) {
+    case 1:
+      weight = weight * 0.78;
+      break;
+    case 2:
+      weight = weight * 0.39;
+      break;
+    case 3:
+      weight = weight * 2.65;
+      break;
+    case 4:
+      weight = weight * 1.17;
+      break;
+    case 5:
+      weight = weight * 1.05;
+      break;
+    case 6:
+      weight = weight * 1.23;
+      break;
+    default:
+      std::cout << "Invalid planet selection.\n";
+      return 1; // Exit with error code
+  }
+
+  std::cout << "\nYour weight: " << weight << "\n";
+  
+}
